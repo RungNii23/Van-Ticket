@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+.img-checker {
+	display: none;
+}
+.img-checker + img {
+	opacity: 0.5;
+	cursor: pointer;
+}
+.img-checker:checked + img {
+	opacity: 1.0;
+}
+</style>
+
+</head>
+<body>
+<h3>เลือกที่นั่ง</h3>
+<form>
+<table cellspacing = "0" bgcolor="#000000"
+style=" 
+padding: 15px; 
+-moz-border-radius: 15px; 
+-khtml-border-radius: 15px; 
+-webkit-border-radius: 15px; 
+border-radius: 15px;">
+
+<input type="text" class="inputsL" placeholder="จุดขึ้นรถ" />
+				<input type="text" class="inputsR" placeholder="จุดลงรถ" /> 
+
+
+
+
+<tr height="80" color ="pink">
+ 	<td colspan="4"><font color="#FFFFFF" size = "25">เลือกที่นั่ง</font></td>;
+</tr>
+<tr>
+	<td><label><input type="checkbox" name="test[]" value="sit_1" class="img-checker">
+		<img src="1.png" width="80" height="80">
+		</label>
+    </td>
+    <td></td>
+    <td colspan="2">
+		<img src="15.png" height="80%">
+    </td>
+</tr>
+	<td></td>
+	<td><label><input type="checkbox" name="test[]" value="sit_2" class="img-checker">
+		<img src="2.png"  width="80" height="80">
+		</label>
+    </td>
+    <td><label><input type="checkbox" name="test[]" value="sit_3" class="img-checker">
+		<img src="3.png"  width="80" height="80">
+		</label>
+    </td>
+    <td><label><input type="checkbox" name="test[]" value="sit_4" class="img-checker">
+		<img src="4.png"  width="80" height="80">
+		</label>
+    </td>
+<tr>
+	<td><label><input type="checkbox" name="test[]" value="sit_5" class="img-checker">
+		<img src="5.png"  width="80" height="80">
+		</label>
+    </td>
+    <td></td>
+    <td><label><input type="checkbox" name="test[]" value="sit_6" class="img-checker">
+		<img src="6.png"  width="80" height="80">
+		</label>
+    </td>
+    <td><label><input type="checkbox" name="test[]" value="sit_7" class="img-checker">
+		<img src="7.png"  width="80" height="80">
+		</label>
+    </td>
+</tr>
+<tr>
+	<td><label><input type="checkbox" name="test[]" value="sit_8" class="img-checker">
+		<img src="8.png"  width="80" height="80">
+		</label>
+    </td>
+    <td></td>
+    <td><label><input type="checkbox" name="test[]" value="sit_9" class="img-checker">
+		<img src="9.png"  width="80" height="80">
+		</label>
+    </td>
+    <td><label><input type="checkbox" name="test[]" value="sit_10" class="img-checker">
+		<img src="10.png"  width="80" height="80">
+		</label>
+    </td>
+</tr>
+<tr>
+	<td><label><input type="checkbox" name="test[]" value="sit_11" class="img-checker">
+		<img src="11.png"  width="80" height="80">
+		</label>
+    </td>
+    <td><label><input type="checkbox" name="test[]" value="sit_12" class="img-checker">
+		<img src="12.png"  width="80" height="80">
+		</label>
+    </td>
+    <td><label><input type="checkbox" name="test[]" value="sit_13" class="img-checker">
+		<img src="13.png"  width="80" height="80">
+		</label>
+    </td>
+    <td><label><input type="checkbox" name="test[]" value="sit_14" class="img-checker">
+		<img src="14.png"  width="80" height="80">
+		</label>
+    </td>
+</tr>
+</table>
+<br>
+<br>
+<input type="button" onclick="alert(Array.prototype.slice.call(this.form.elements['test[]']).map(function (i) { return i.checked ? i.value : false; }).filter(Boolean));" value="Check Values">
+</form>
+<hr>
+</body>
+
+</html>
